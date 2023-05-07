@@ -11,9 +11,9 @@ namespace Misha
             int age;
             double salary;
             int netWorth;
-            public int numberOfStudents;
-            public int numberOfSupports;
-            public int numberOfTeachers;
+            public static int numberOfStudents;
+            public static int numberOfSupports;
+            public static int numberOfTeachers;
 
             //Конструктор люди
             public people(string name, int age, double salary, double bonus)
@@ -47,7 +47,12 @@ namespace Misha
             //Функция показа статов
             public virtual void showStats()
             {
-                Console.WriteLine($"Name of the person: {name} \n Salary of the person: {salary} \n");
+                Console.WriteLine($"Name of the person: {getName()} \n Salary of the person: {getSalary()}$ \n");
+            }
+
+            public  static void allPeopleCount()
+            {
+                Console.WriteLine($"How many students we have: {numberOfStudents} \nHow many teachers we have: {numberOfTeachers} \nHow many supports we have: {numberOfSupports}\n");
             }
 
         }
@@ -62,7 +67,7 @@ namespace Misha
 
         public override void showStats()
         {
-            Console.WriteLine($"Name of the Support: {getName} \n Salary of the Support: {getSalary} \n");
+            Console.WriteLine($"Name of the Support: {getName()} \n Salary of the Support: {getSalary()}$ \n");
 
         }
 
@@ -78,7 +83,7 @@ namespace Misha
         }
         public override void showStats()
         {
-            Console.WriteLine($"Name of the Teachers: {getName} \n Salary of the Teacher: {getSalary} \n");
+            Console.WriteLine($"Name of the Teacher: {getName()} \n Salary of the Teacher: {getSalary()}$ \n");
 
         }
     }
@@ -90,7 +95,7 @@ namespace Misha
         }
         public override void showStats()
         {
-            Console.WriteLine($"Name of the Student: {getName} \n NetWorth of the Student: {getNetWorth} \n");
+            Console.WriteLine($"Name of the Student: {getName()} \n NetWorth of the Student: {getSalary()}$ \n");
         }
     }
 }

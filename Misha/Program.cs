@@ -12,8 +12,11 @@ Teachers Teacher1 = new Teachers("Smart Nerd Bob", 40, 100000.0, 20000.0);
 SupportOnSite Support1 = new SupportOnSite("Indian Rahmad", 30, 250, 250);
 
 //Выводим значения функций
+
+
 Console.WriteLine("\tUniversity");
 Place1.showStatsOfPlace();
+People.people.allPeopleCount();
 Console.WriteLine("\tTeachers:");
 Teacher1.showStats();
 
